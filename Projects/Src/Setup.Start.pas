@@ -15,8 +15,8 @@ procedure Start;
 
 implementation
 
-{$SETPEOSVERSION 6.1}
-{$SETPESUBSYSVERSION 6.1}
+{$SETPEOSVERSION 6.0}
+{$SETPESUBSYSVERSION 6.0}
 {$WEAKLINKRTTI ON}
 
 { The compiler may delete some of the resources included here }

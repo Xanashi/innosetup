@@ -2289,8 +2289,8 @@ begin
     if not StrToSetupVersionData(ParamValue.Data, AOnlyBelowVersion) then
       AbortCompileParamError(SCompilerParamInvalid2, ParamCommonOnlyBelowVersion);
     if (AOnlyBelowVersion.NTVersion <> 0) and
-       (AOnlyBelowVersion.NTVersion <= $06010000) then
-      WarningsList.Add(Format(SCompilerOnlyBelowVersionParameterNTTooLowWarning, ['6.1']));
+       (AOnlyBelowVersion.NTVersion <= $06000000) then
+      WarningsList.Add(Format(SCompilerOnlyBelowVersionParameterNTTooLowWarning, ['6.0']));
   end;
 end;
 
@@ -3231,8 +3231,8 @@ begin
           Invalid;
         if SetupHeader.MinVersion.WinVersion <> 0 then
           AbortCompile(SCompilerMinVersionWinMustBeZero);
-        if SetupHeader.MinVersion.NTVersion < $06010000 then
-          AbortCompileFmt(SCompilerMinVersionNTTooLow, ['6.1']);
+        if SetupHeader.MinVersion.NTVersion < $06000000 then
+          AbortCompileFmt(SCompilerMinVersionNTTooLow, ['6.0']);
       end;
     ssMissingMessagesWarning: begin
         MissingMessagesWarning := StrToBool(Value);
@@ -3244,8 +3244,8 @@ begin
         if not StrToSetupVersionData(Value, SetupHeader.OnlyBelowVersion) then
           Invalid;
         if (SetupHeader.OnlyBelowVersion.NTVersion <> 0) and
-           (SetupHeader.OnlyBelowVersion.NTVersion <= $06010000) then
-          AbortCompileFmt(SCompilerOnlyBelowVersionNTTooLow, ['6.1']);
+           (SetupHeader.OnlyBelowVersion.NTVersion <= $06000000) then
+          AbortCompileFmt(SCompilerOnlyBelowVersionNTTooLow, ['6.0']);
       end;
     ssOutput: begin
         if not FixedOutput then
