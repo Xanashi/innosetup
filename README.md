@@ -15,8 +15,8 @@ Getting Started
     First you need to download the sources from Github. From the command line do:
 
     ```
-    > git clone https://github.com/jrsoftware/issrc.git issrc
-    > cd issrc
+    > git clone https://github.com/Xanashi/innosetup.git innosetup
+    > cd innosetup
     ```
 
     If you don't have the Git client (`git`), get it from:
